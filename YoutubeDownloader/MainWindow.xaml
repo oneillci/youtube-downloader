@@ -1,0 +1,27 @@
+﻿<Window x:Class="YoutubeDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="150" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="115*" />
+            <ColumnDefinition Width="402*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Youtube Url" Margin="10,0,0,0.001" />
+        <TextBox Grid.Column="1" Name="txtUrl" Margin="0,0,10,0" KeyDown="TxtLocation_OnKeyDown"></TextBox>
+        
+        <TextBlock Grid.Row="1" Text="Download location" Margin="10,2.989,0,0" />
+        <TextBox x:Name="txtLocation" Grid.Row="1" Grid.Column="1" Margin="0,0,10,0" KeyDown="TxtLocation_OnKeyDown"/>
+        
+        <Button Grid.Row="2" Grid.Column="1" Name="btnDownload" Click="BtnDownload_OnClick" Margin="0,6,10,0" HorizontalAlignment="Right" Width="146.5">Download</Button>
+        <ProgressBar Name="progress" Grid.Row="3" Grid.ColumnSpan="2" Value="0" Margin="10,6,10,0" Height="25"/>
+    </Grid>
+</Window>
