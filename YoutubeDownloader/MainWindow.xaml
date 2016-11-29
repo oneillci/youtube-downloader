@@ -1,7 +1,7 @@
 ﻿<Window x:Class="YoutubeDownloader.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Youtube Downloader" Height="283" Width="825" ResizeMode="NoResize">
+        Title="Youtube Downloader" Height="283" Width="8git25" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="115*" />
