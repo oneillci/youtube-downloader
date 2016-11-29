@@ -17,7 +17,7 @@ namespace YoutubeDownloader
         public MainWindow()
         {
             InitializeComponent();
-            txtLocation.Text = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\");
+            txtLocation.Text = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\youtube");
         }
 
         private async void BtnDownload_OnClick(object sender, RoutedEventArgs e)
@@ -46,7 +46,7 @@ namespace YoutubeDownloader
 
             if (!path.EndsWith(".mp4"))
             {
-                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads",
+                path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\youtube",
                     video.Title.Replace(':', '-') + video.VideoExtension);
                 txtLocation.Text = path;
             }
