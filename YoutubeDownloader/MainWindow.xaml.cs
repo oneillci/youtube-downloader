@@ -25,6 +25,15 @@ namespace YoutubeDownloader
             await DoDownload();
         }
 
+        private async void BtnPaste_OnClick(object sender, RoutedEventArgs e)
+        {
+            var text = Clipboard.GetText(TextDataFormat.Text);
+            if (!string.IsNullOrWhiteSpace(text))
+            {
+                txtUrl.Text = text;
+            }
+        }
+
         private async void TxtLocation_OnKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)

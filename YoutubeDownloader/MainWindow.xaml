@@ -16,7 +16,20 @@
         </Grid.RowDefinitions>
 
         <TextBlock Text="Youtube Url" Margin="10,20,0,0.001" FontSize="24" />
-        <TextBox Grid.Column="1" Name="txtUrl" Margin="0,20,10,0" KeyDown="TxtLocation_OnKeyDown" FontSize="24"></TextBox>
+        <Grid Grid.Column="1" Margin="0,20,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBox Name="txtUrl" KeyDown="TxtLocation_OnKeyDown" FontSize="24"></TextBox>
+            <Button Grid.Column="1" Name="BtnPaste" Click="BtnPaste_OnClick" FontSize="20" MinHeight="20">
+                <Image Source="Paste.png" Width="16" Height="16"></Image>
+            </Button>
+        </Grid>
 
         <TextBlock Grid.Row="1" Text="Save to" Margin="10,10,0,0" FontSize="24" />
         <TextBox x:Name="txtLocation" Grid.Row="1" Grid.Column="1" Margin="0,10,10,0" KeyDown="TxtLocation_OnKeyDown" FontSize="24"/>
