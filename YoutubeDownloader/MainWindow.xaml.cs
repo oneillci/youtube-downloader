@@ -49,11 +49,12 @@ namespace YoutubeDownloader
             if (video == null)
             {
                 MessageBox.Show("Could not find a video with audio to download");
+                return;
             }
 
             string path = txtLocation.Text;
 
-            if (!path.EndsWith(".mp4"))
+            if (ChkName.IsChecked.GetValueOrDefault(true) || !path.EndsWith(".mp4"))
             {
                 path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\youtube",
                     video.Title.Replace(':', '-') + video.VideoExtension);
@@ -68,6 +69,5 @@ namespace YoutubeDownloader
             btnDownload.IsEnabled = true;
             progress.Value = 0;
         }
-
     }
 }
